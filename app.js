@@ -1,19 +1,14 @@
-var UserAccount = /** @class */ (function () {
-    function UserAccount(name, id) {
-        this.name = name;
-        this.id = id;
+function add(x, y) {
+    return x + y;
+}
+// Argument of type 'string' is not assignable to parameter of type 'number'.
+// console.log(add("5",25));
+console.log(add(5, 53));
+function charactersInString(word) {
+    var characterArray = [];
+    for (var i = 0; i < word.length; i++) {
+        characterArray.push(word.charAt(i));
     }
-    return UserAccount;
-}());
-var AdminAccount = /** @class */ (function () {
-    function AdminAccount(name, id, password) {
-        this.name = name;
-        this.id = id;
-        this.password = password;
-    }
-    return AdminAccount;
-}());
-var user = new UserAccount("Frank", 2);
-var admin = new AdminAccount("Bob", 23, "secret");
-console.log(user);
-console.log(admin);
+    return characterArray;
+}
+console.log(charactersInString("testing"));

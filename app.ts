@@ -1,32 +1,20 @@
-interface User  {
-    name: string;
-    id: number;
+function add(x: number, y: number): number{
+    return x + y;
 }
+// Argument of type 'string' is not assignable to parameter of type 'number'.
+// console.log(add("5",25));
 
-class UserAccount {
-    name: string;
-    id: number;
+console.log(add(5,53));
 
-    constructor(name: string, id: number){
-        this.name = name;
-        this.id = id;
+function charactersInString(word :string): string[]{
+    let characterArray = [];
+    for(let i=0;i<word.length;i++){
+        characterArray.push(word.charAt(i));
+
     }
+
+    return characterArray;
+
 }
 
-class AdminAccount {
-    name: string;
-    id: number;
-    password: string;
-    
-    constructor(name: string, id: number, password: string){
-        this.name = name;
-        this.id = id;
-        this.password = password;
-    }
-}
-
-const user: User = new UserAccount("Frank", 2);
-const admin :User = new AdminAccount("Bob", 23, "secret");
-
-console.log(user);
-console.log(admin);
+console.log(charactersInString("testing"))
